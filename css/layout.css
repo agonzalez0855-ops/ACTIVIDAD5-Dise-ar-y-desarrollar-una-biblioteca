@@ -1,0 +1,70 @@
+/* -------------------------
+   LAYOUT.CSS – ESTRUCTURA GENERAL
+-------------------------- */
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Caja centrada */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hero */
+.hero {
+  padding: 4rem 1rem;
+  text-align: center;
+  background: var(--color-primary);
+  color: white;
+}
+
+/* Secciones */
+.section {
+  padding: 3rem 0;
+}
+.menu-grid {
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.menu-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform .3s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.menu-item h2 {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
